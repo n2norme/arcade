@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+/* Réinitialisation des styles de base */
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --retro-blue: #37a1fd;
+    --dark-gray: #333;
+    --gray-border: #777;
+    --base-font-size: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Une colonne en mode mobile par défaut */
+    grid-gap: 20px; /* Espacement entre les images */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden; /* Pour cacher le débordement de la bordure du bouton Plein Écran */
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border: 4px solid #fff; /* Bordure blanche autour des images */
+    border-radius: 8px; /* Coins arrondis */
+    cursor: pointer;
+    transition: transform 0.3s; /* Transition pour l'effet de survol */
+}
+
+
+
+.fullscreen-button {
+    background-color: #37a1fd; /* Couleur rétro gaming */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 3vh; /* Place le bouton en bas de la galerie-item */
+}
+
+/* Style du modal en plein écran */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fond noir semi-transparent */
+    z-index: 1;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-content {
+    max-width: 80%;    /* Largeur maximale */
+    max-height: 80vh;  /* Hauteur maximale */
+    width: auto;       /* Largeur automatique */
+    height: auto;      /* Hauteur automatique */
+    margin: auto;      /* Centrage automatique */
+    display: block;
+    border: 4px solid #fff;
+    border-radius: 8px;
+    object-fit: contain; /* Cette propriété assure que l'image conserve ses proportions */
+}
+
+
+
+
+
+/* Media query pour l'affichage en mode desktop */
+@media screen and (min-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr); /* Trois colonnes en mode desktop */
+    }
+
+    .gallery-item {
+        min-width: calc(33.33% - 20px); /* Pour 3 colonnes en mode desktop, avec un espacement de 20px entre les images */
+    }
+}
+
+.back-arrow {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 30px solid white; /* Taille et couleur de la flèche */
+    cursor: pointer; /* Style du curseur en forme de main pour indiquer la possibilité de cliquer */
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+@media screen {
+    .back-arrow {
+        margin-right: 90vw;
+    }
+}
+
+#back-to-top {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background-color: #37a1fd; /* Couleur de fond du bouton */
+     color: #fff; /* Couleur du texte du bouton */
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     display: none;
+     opacity: 75%;
+
+ }
+
+#back-to-top a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Styles au survol du bouton */
+#back-to-top:hover {
+    background-color: #fff; /* Couleur de fond au survol */
+    color: #37a1fd; /* Couleur du texte au survol */
+}
+
+/* Styles de base pour la vidéo */
+
+/* Styles de base pour la vidéo */
+.video-container {
+    position: relative;
+    width: 100%; /* Utilise toute la largeur disponible */
+    padding-top: 56.25%; /* Ratio 16:9 - ajustez cette valeur si le ratio de vos vidéos est différent */
+    overflow: hidden;
+    margin: 20px auto; /* Centrage avec une marge */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée pour un effet en relief */
+    border-radius: 8px; /* Coins arrondis */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Supprime toute bordure par défaut */
+}
+
+@media screen and (min-width: 768px) {
+    .video-container {
+        max-width: 100%; /* Augmente la largeur maximale sur les écrans plus larges */
+    }
+}

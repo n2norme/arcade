@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+/* Variables CSS */
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --retro-blue: #37a1fd;
+    --dark-gray: #333;
+    --gray-border: #777;
+    --base-font-size: 16px;
+}
+
+/* Styles généraux */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-size: var(--base-font-size);
+}
+
+/* En-tête */
+header {
+    background-color: var(--retro-blue);
+    padding: 1.25rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.0rem;
+    text-align: center;
+}
+
+header h2{
+    font-size: 0.75rem;
+}
+
+/* Section des étapes de construction */
+.construction-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1.25rem;
+}
+
+.step {
+    background-color: var(--dark-gray);
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    padding: 1.25rem;
+    margin: 0.625rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 250px; /* Taille minimale pour éviter un aspect écrasé */
+}
+
+.step img {
+    width: 80%;
+    height: auto;
+    margin: 0.625rem;
+    border-radius: 16%;
+}
+
+.step h2 {
+    font-size: 1.25rem;
+    margin: 0.625rem 0;
+    color: var(--retro-blue);
+}
+
+.step p {
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--retro-blue);
+    padding: 0.625rem 0;
+    text-align: center;
+}
+
+.back-arrow {
+    display: inline-block; /* Assurez-vous que le div soit affiché */
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent; /* La taille de la flèche */
+    border-bottom: 10px solid transparent; /* La taille de la flèche */
+    border-right: 20px solid var(--text-color); /* La couleur de la flèche */
+    cursor: pointer;
+    margin: 20px;
+}
+
+strong {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+p a {
+    color: var(--retro-blue);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Media Queries pour les écrans plus grands */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: calc(var(--base-font-size) * 1.25);
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    .step h2 {
+        font-size: 1.5rem;
+    }
+
+    .step p {
+        font-size: 1.2rem;
+    }
+}

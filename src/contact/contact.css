@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000;
+    color: #37a1fd;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #37a1fd;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 5vh;
+}
+
+main {
+    padding: 20px;
+}
+
+.contact-info {
+    background-color: rgba(33, 33, 33, 0.8); /* Fond semi-transparent */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: "Roboto", sans-serif;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.contact-info a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #37a1fd;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.back-arrow {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 30px solid white; /* Taille et couleur de la flèche */
+    cursor: pointer; /* Style du curseur en forme de main pour indiquer la possibilité de cliquer */
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 2vh 2vw;
+
+}
+
+@media screen and (min-width: 768px) {
+    .back-arrow {
+        margin-right: 90vw;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .contact-info {
+        max-width: 80vw;
+        margin-top: 20vh;
+
+    }
+}
+img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de l'écran */
+    height: auto; /* Maintient le ratio hauteur/largeur de l'image */
+
+    padding: 0;
+    z-index: -1; /* Place l'image derrière les autres éléments si nécessaire */
+
+}
+
+/* Ajustements pour les grands écrans */
+@media screen and (min-width: 768px) {
+     {
+        max-height: 50vh; /* Limite la hauteur de l'image sur les grands écrans */
+    }
+}
+
+main {
+    padding: 20px;
+    background-image: url("https://images.unsplash.com/photo-1573139846051-02482cd240ae?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=louie-castro-garcia-UitmwXNMHiE-unsplash.jpg"); /* Assurez-vous que le chemin est correct */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+footer p {
+    font-size: 0.5em;
+    text-align: center;
+    margin: 0;
+}

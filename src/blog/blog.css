@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000;
+    color: #3F51B5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #283593;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1, h2 {
+    font-size: 1.5em;
+}
+
+main {
+    padding: 15px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #283593;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

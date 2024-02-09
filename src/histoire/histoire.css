@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    font-family: "Lato" , sans-serif;
+    background-color: #000; /* Fond noir */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #37a1fd; /* Bleu plus foncé pour l'en-tête et le pied de page */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1{
+    font-size: 2em;
+    font-family: "Press Start 2P", cursive;
+
+}
+h2 {
+    font-size: 1.5em;
+    font-family: "Press Start 2P", cursive;
+}
+p {
+    font-size: 1.2em;
+    font-family: "Roboto", sans-serif;
+}
+main {
+    padding: 15px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+
+.back-arrow {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 30px solid white; /* Taille et couleur de la flèche */
+    cursor: pointer; /* Style du curseur en forme de main pour indiquer la possibilité de cliquer */
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+
+footer p {
+    font-size: 0.8em;
+    font-family: "Press start 2P", cursive;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #37a1fd; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    opacity: 75%;
+
+}
+
+#back-to-top a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Styles au survol du bouton */
+#back-to-top:hover {
+    background-color: #fff; /* Couleur de fond au survol */
+    color: #37a1fd; /* Couleur du texte au survol */
+}
+
+/* Styles au survol du bouton */
+#back-to-top:hover {
+    background-color: #fff;
+    color: #37a1fd;
+    transition: background-color 0.3s, color 0.3s; /* Ajout d'une transition */
+}
+
+@media screen and (min-width: 768px){
+    h1{
+        font-size: 2.5rem; /* Taille plus grande pour les titres */
+        text-align: center;
+    },
+    h2 {
+        font-size: 2rem; /* Taille plus grande pour les titres */
+        text-align: left;
+    },
+    p {
+        font-size: 1.5rem; /* Taille plus grande pour le paragraphe */
+        text-align: left;
+    }
+    footer p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+}
